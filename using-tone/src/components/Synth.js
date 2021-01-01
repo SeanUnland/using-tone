@@ -11,6 +11,8 @@ const synth = new Tone.MonoSynth({
 }).toDestination()
 synth.triggerAttackRelease("C4", "8n")
 
+
+
 const duoSynth = new Tone.DuoSynth().toDestination()
 duoSynth.triggerAttackRelease("C4", "2n")
 
@@ -18,7 +20,9 @@ const Synth = props => {
 
     return (
         <div>
-            <button>{synth}</button>
+            <button onClick={synth}>Synth</button>
+            <button onClick={duoSynth}>Duo Synth</button>
+
           
             
         </div>
